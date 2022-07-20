@@ -12,7 +12,7 @@ Demo version: http://rps-online-demo.herokuapp.com/
 Application doesn't allow to create accounts, each session is a new player.
 
 ### Gameplay
-User can start a game by clicking a button. System will try to find existing lobby, and if there is not, it will create a new room with current player id, then user need to wait for opponent. If there is already room with waiting status, user joins and game starts automatically.
+User can start a game by clicking a button. System will try to find an opponent, and if there is not, it will create a new room with current player id, then user need to wait for opponent. If there is already room with waiting status, user joins and game starts automatically.
 
 ### Logs
 Log system allows to display necessary information for the user such as current game score or waiting for player information. Every game room stores information about it's own socket id and connected users sockets, so logs can be displayed individually. All log messages can be modified in ```settings.py```.
