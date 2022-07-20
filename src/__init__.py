@@ -10,9 +10,11 @@ socketio = SocketIO()
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-    DB_URI = os.environ.get('DATABASE_URL')
-    app.config['SQLALCHEMY_DATABASE_URI'] = DB_URI.replace('postgres://', 
-                                                           'postgresql://')
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
+    # DB_URI = os.environ.get('DATABASE_URL')
+    # app.config['SQLALCHEMY_DATABASE_URI'] = DB_URI.replace('postgres://', 
+    #                                                        'postgresql://')
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 
     from src.models import User, Game, Room, Round
 

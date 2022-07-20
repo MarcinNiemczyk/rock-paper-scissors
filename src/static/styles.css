@@ -19,8 +19,6 @@ body {
 
 nav {
     align-items: center;
-    
-    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -242,6 +240,7 @@ main {
     position: absolute;
     right: 0;
     top: 10%;
+    z-index: 1;
 }
 
 .statistics {
@@ -298,4 +297,186 @@ table td {
 
 table tbody td {
     color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 1200px) {
+    .table-container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    nav {
+        background-color: aliceblue;
+        justify-content: center;
+        left: -100%;
+        position: absolute;
+        transition: left 0.3s ease-in-out;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    main {
+        align-items: flex-start;
+        height: 100%;
+        width: 90%;
+    }
+
+    .toggle-menu {
+        height: 20px;
+        left: 30px;
+        top: 40px;
+        width: 32px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .toggle-menu:hover {
+        cursor: pointer;
+    }
+
+    .toggle-menu__bar,
+    .toggle-menu__bar::before,
+    .toggle-menu__bar::after {
+        background-color: black;
+        border-radius: 20px;
+        content: '';
+        display: block;
+        height: 2px;
+        position: absolute;
+        width: 100%;
+    }
+
+    .toggle-menu__bar {
+        position: relative;
+    }
+
+    .toggle-menu__bar::before {
+        top: 9px;
+    }
+
+    .toggle-menu__bar::after {
+        top: 18px;
+    }
+
+    .logs {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .logs-container {
+        height: 120px;
+        width: 90%;
+    }
+
+    .credits {
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .credits-container {
+        margin: 20px 0;
+    }
+
+    .credits-amount {
+        top: 85%;
+    }
+
+    .alert {
+        font-size: 12px;
+        padding: 5px 0;
+        text-align: center;
+        top: 0%;
+        width: 100%;
+    }
+
+    .statistics {
+        width: 100%;
+    }
+
+    .date-selector label {
+        display: none;
+    }
+
+    .date-selector {
+        width: 70%;
+    }
+
+    .date-selector input {
+        padding: 7px 10px;
+        font-size: 15px;
+    }
+
+    .table-container {
+        width: 90%;
+    }
+
+    .play {
+        align-self: center;
+    }
+
+    .game {
+        margin-top: 10vh;
+    }
+
+    .game-container {
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .game button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .game button:focus {
+        background-color: #F0F0F0;
+    }
+
+    table td {
+        font-size: 12px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 992px) {
+    .play {
+        align-self: flex-start;
+        margin-top: 15vh;
+    }
+
+    .game {
+        width: 70%;
+    }
+
+    .game-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .gameLabel {
+        display: none;
+    }
+
+    .logs-container {
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .date-selector {
+        align-self: flex-end;
+    }
 }

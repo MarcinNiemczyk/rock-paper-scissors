@@ -54,6 +54,13 @@ function resetShapes(rock, paper, scissors) {
 let interval
 // Prevent user for multiple clicks before initiated function ends
 let clicked = false
+
+// Handle mobile menu
+document.querySelector('.toggle-menu').onclick = () => {
+  document.querySelector('nav').classList.toggle('active')
+}
+
+
 const socket = io.connect();
 
 if (window.location.pathname == '/') {

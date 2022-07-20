@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.min.js"></script>
-    <script type="text/javascript" src="/static/script.js"></script>
+    <script type="text/javascript" src="/static/script.js" defer></script>
     <link rel="stylesheet" href="/static/styles.css">
     <title>Rock-paper-scissors</title>
 </head>
@@ -28,6 +28,9 @@
             <button type="submit" id="leaveRoom" class="hidden">Leave Room</button>
         </div>
     </nav>
+    <div class="toggle-menu">
+        <div class="toggle-menu__bar"></div>
+    </div>
         {% block body %}
         {% endblock %}
 </body>
