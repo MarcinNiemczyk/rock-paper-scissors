@@ -240,6 +240,7 @@ main {
     position: absolute;
     right: 0;
     top: 10%;
+    z-index: 1;
 }
 
 .statistics {
@@ -299,6 +300,11 @@ table tbody td {
 }
 
 @media (max-width: 992px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+    }
+
     nav {
         background-color: aliceblue;
         justify-content: center;
@@ -311,6 +317,10 @@ table tbody td {
 
     nav.active {
         left: 0;
+    }
+
+    main {
+        width: 90%;
     }
 
     .toggle-menu {
@@ -349,4 +359,37 @@ table tbody td {
     .toggle-menu__bar::after {
         top: 18px;
     }
+
+    .logs {
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .logs-container {
+        height: 120px;
+        width: 90%;
+    }
+
+    .credits {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .credits-container {
+        margin: 20px 0;
+    }
+
+    .credits-amount {
+        top: 85%;
+    }
+
+    .alert {
+        font-size: 12px;
+        padding: 5px 0;
+        text-align: center;
+        top: 0%;
+        width: 100%;
+    }
+
 }
