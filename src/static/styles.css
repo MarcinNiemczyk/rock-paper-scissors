@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+nav {
+    align-items: center;
+    
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 200px;
+}
+
+.nav-items {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 10vh;
+}
+
+.nav-items a,
+.nav-items button {
+    margin: 15px 0;
+}
+
+.nav-items a {
+    background: linear-gradient(to right, rgb(185, 185, 185), rgb(171, 171, 171));
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+    padding: 10px 0;
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+}
+
+.nav-items a:hover {
+    border-color: white;
+    color: white;
+}
+
+.nav-items button {
+    background-color: rgb(160, 81, 81);
+    border: none;
+    border-radius: 5px;
+    color: rgb(30, 30, 30);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 10px 30px;
+}
+
+.nav-items button:hover {
+    background-color: rgb(73, 8, 8);
+    color: white;
+    cursor: pointer;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: calc(100vw - 500px);
+}
+
+.play {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.play button {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    color: white;
+    margin: 5px;
+    padding: 20px 100px;
+}
+
+.play button:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+}
+
+.play button.cancel {
+    padding: 20px 50px;
+    background-color: rgb(160, 81, 81);
+}
+
+.play button.cancel:hover {
+    background-color: rgb(73, 8, 8);
+}
+
+.play label {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+}
+
+.logs {
+    position: relative;
+}
+
+.logs-title {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 12px;
+    font-weight: bold;
+    left: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.logs-container {
+    background-color: white;
+    border: 1px solid black;
+    height: 500px;
+    margin: 20px;
+    overflow-y: scroll;
+    position: relative;
+    width: 300px;
+}
+
+.logs-container::after {
+    content: "logs";
+    font-weight: bold;
+    left: 0;
+    position: absolute;
+    top: -22px;
+}
+
+.logs-container div {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    padding: 5px;
+}
+
+.game button {
+    border-radius: 50%;
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+}
+
+.game button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.gameLabel {
+    text-align: center;
+}
+
+.game button.select {
+    background-color: rgba(0, 120, 0, 0.6);
+}
+
+.game button.deselect {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.game button.deselect img {
+    opacity: 0.4;
+}
+
+.credits {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    margin-bottom: 20%;
+}
+
+.credits-amount {
+    position: absolute;
+    top: 10%;
+}
+
+.credits-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 25%;
+}
+
+.credits-container form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.credits-container input {
+    background-color: rgb(233, 236, 245);
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 2px;
+    width: 200px;
+    padding: 25px 0;
+}
+
+.credits-container input:hover {
+    background-color: rgb(204, 225, 243);
+    border-color: black;
+    color: black;
+    cursor: pointer;
+}
+
+.credits-container label {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 11px;
+}
+
+.alert {
+    background-color: rgb(253, 253, 181);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    padding: 20px 50px;
+    position: absolute;
+    right: 0;
+    top: 10%;
+}
+
+.statistics {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.statistics h4 {
+    margin: 10px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.date-selector,
+.table-container {
+    width: 40%;
+}
+
+.date-selector {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.date-selector input {
+    margin: 10px;
+}
+
+table {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+table thead tr {
+    width: 100%;
+}
+
+table th {
+    font-size: 12px;
+}
+
+table th,
+table td {
+    padding: 2px 5px;
+}
+
+table tbody td {
+    color: rgba(0, 0, 0, 0.7);
+}

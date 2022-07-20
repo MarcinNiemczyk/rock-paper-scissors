@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<main>
+    <div class="play">
+        <button type="submit" id="playButton">START GAME</button>
+        <label for="playButton" id="playLabel">Each game costs <strong>3</strong> credits</label>
+    </div>
+    <div class="game hidden">
+        <h3 class="gameLabel">Choose your shape</h3>
+        <button type="submit" id="paper" name="paper"><img src="static/images/paper.png" height="50px"></button>
+        <button type="submit" id="rock" name="rock"><img src="static/images/rock.png" height="50px"></button>
+        <button type="submit" id="scissors" name="scissors"><img src="static/images/scissors.png" height="50px"></button>
+    </div>
+</main>
+<div class="logs">
+    <label class="logs-title">logs</label>
+    <div class="logs-container"></div>
+</div>
+
+{% endblock %}

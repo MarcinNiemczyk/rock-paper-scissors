@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <main class="statistics">
+        <form class="date-selector" action="{{ url_for('views.statistics', year=year, month=month, day=day) }}" method="post">
+            <label for="dateFilter">Date filter</label>
+            <input type="date" value="{{ selected_date }}" id="dateFilter" name="date">
+            <input type="submit">
+        </form>
+        <h4>Today</h4>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>wins</th>
+                        <th>loses</th>
+                        <th>user id</th>
+                        <th>earned credits</th>
+                        <th>total time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>{{ summary.wins }}</td>
+                            <td>{{ summary.loses }}</td>
+                            <td>{{ summary.user_id }}</td>
+                            <td>{{ summary.credits }}</td>
+                            <td>{{ summary.time }}</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4>Details</h4>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>status</th>
+                        <th>score</th>
+                        <th>user id</th>
+                        <th>credits</th>
+                        <th>start time</th>
+                        <th>duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for game in games %} 
+                        <tr>
+                            <td>{{ game.status }}</td>
+                            <td>{{ game.score }}</td>
+                            <td>{{ game.user_id }}</td>
+                            <td>{{ game.balance }}</td>
+                            <td>{{ game.start_time }}</td>
+                            <td>{{ game.duration }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+{% endblock %}
