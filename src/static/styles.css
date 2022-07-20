@@ -299,6 +299,12 @@ table tbody td {
     color: rgba(0, 0, 0, 0.7);
 }
 
+@media (max-width: 1200px) {
+    .table-container {
+        width: 60%;
+    }
+}
+
 @media (max-width: 992px) {
     body {
         flex-direction: column;
@@ -392,4 +398,30 @@ table tbody td {
         width: 100%;
     }
 
+    .statistics {
+        width: 100%;
+    }
+
+    .date-selector label {
+        display: none;
+    }
+
+    .date-selector {
+        width: 70%;
+    }
+
+    .date-selector input {
+        padding: 7px 10px;
+        font-size: 15px;
+    }
+
+    .table-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .date-selector {
+        align-self: flex-end;
+    }
 }
